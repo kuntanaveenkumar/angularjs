@@ -42,7 +42,7 @@ app.controller('pagecontentcontroller', function($scope, $http,$sce) {
 	$http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
 	$http({
     method: 'POST',
-    url: "<?php echo base_url();?>cms/cms.json",
+    url: "<?php echo base_url();?>content/content.json",
     data: $.param({page: '<?php echo $page_name;?>'}),
     headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 		})
@@ -73,7 +73,7 @@ app.controller('pagecontentcontroller', function($scope, $http,$sce) {
 		var formData = {page:'<?php echo $page_name;?>'};		
 		$.ajax(
 		{
-		url : "<?php echo base_url();?>cms/cms.json",
+		url : "<?php echo base_url();?>content/content.json",
 		type: "POST",
 		data : formData,
 		success: function(data, textStatus, jqXHR)
@@ -103,7 +103,7 @@ app.controller('pagecontentcontroller', function($scope, $http,$sce) {
 			var formData = {page:'<?php echo $page_name;?>'};		
 		$.ajax(
 		{
-		url : "<?php echo base_url();?>cms/footerpage.json",
+		url : "<?php echo base_url();?>content/contentfooter.json",
 		type: "POST",
 		data : formData,
 		success: function(data, textStatus, jqXHR)
